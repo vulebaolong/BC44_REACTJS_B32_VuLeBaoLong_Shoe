@@ -67,6 +67,7 @@ export default class Shoe extends Component {
             cart: cloneCart,
         });
     };
+
     render() {
         return (
             <div className="container">
