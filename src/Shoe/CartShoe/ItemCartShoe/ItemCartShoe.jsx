@@ -33,7 +33,7 @@ export default class ItemCartShoe extends Component {
                                 onClick={() => {
                                     handleChangeNum(shoe, -1);
                                 }}
-                                className="btn btn-success"
+                                className="btn btn-warning"
                             >
                                 <i className="w-5 fa-solid fa-minus" />
                             </button>
@@ -42,7 +42,7 @@ export default class ItemCartShoe extends Component {
                                 onClick={() => {
                                     handleChangeNum(shoe, 1);
                                 }}
-                                className="btn btn-success"
+                                className="btn btn-warning"
                             >
                                 <i className="w-5 fa-solid fa-plus" />
                             </button>
@@ -52,7 +52,7 @@ export default class ItemCartShoe extends Component {
                                 onClick={() => {
                                     handleDeleteCart(shoe);
                                 }}
-                                className="btn btn-success"
+                                className="btn btn-danger"
                             >
                                 Xóa
                             </button>

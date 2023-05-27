@@ -68,11 +68,28 @@ export default class Shoe extends Component {
         });
     };
 
+    handleChangeTheme = () => {
+        const htmlEl = document.querySelector("html");
+        htmlEl.attributes["data-bs-theme"].value === "dark"
+            ? (htmlEl.attributes["data-bs-theme"].value = "light")
+            : (htmlEl.attributes["data-bs-theme"].value = "dark");
+    };
+
     render() {
         return (
-            <div className="container">
-                <div className="row py-5">
-                    <div className="col-8 ">
+            <div className="container py-5">
+                <div className=" mb-3">
+                    <button
+                        onClick={() => {
+                            this.handleChangeTheme();
+                        }}
+                        className="change_theme btn btn-success"
+                    >
+                        Change Theme
+                    </button>
+                </div>
+                <div className="row  row-gap-2">
+                    <div className="col-lg-8 ">
                         <ListShoe
                             shoeArr={this.state.shoeArr}
                             handleViewDetail={this.handleViewDetail}
@@ -80,7 +97,7 @@ export default class Shoe extends Component {
                         />
                     </div>
                     <div
-                        className="col-4 d-flex flex-column gap-2 "
+                        className="col-lg-4 d-flex flex-column gap-2 "
                         style={{ height: "80vh" }}
                     >
                         <DetailShoe detailShoe={this.state.detailShoe} />

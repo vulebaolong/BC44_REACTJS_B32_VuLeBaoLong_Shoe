@@ -4,11 +4,8 @@ export default class ItemShoe extends Component {
     render() {
         const { shoe, handleViewDetail, handleAddToCart } = this.props;
         return (
-            <div className="col-4 ">
-                <div
-                    className="card p-3 h-100 justify-content-between gap-2"
-                    style={{ width: "16rem" }}
-                >
+            <div className="col-12 col-lg-6 col-xl-4 ">
+                <div className="card p-3 h-100 justify-content-between gap-2">
                     <div className="">
                         <img src={shoe.image} className="card-img-top" alt={shoe.name} />
                         <h5 className="card-title">{shoe.name}</h5>
