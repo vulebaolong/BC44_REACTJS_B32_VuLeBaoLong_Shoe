@@ -10,7 +10,7 @@ export default class ListShoe extends Component {
                 style={{ height: "80vh" }}
             >
                 <h2 className="mb-5">Danh sách sản phẩm</h2>
-                <div className="row row-gap-3 overflow-y-scroll">
+                <div className="row row-gap-3 overflow-y-auto">
                     {shoeArr.map((shoe) => {
                         return (
                             <ItemShoe

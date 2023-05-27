@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 
 export default class DetailShoe extends Component {
+    createText = (name) => {
+        if (name.length > 10) {
+            return name.slice(0, 90) + "...";
+        }
+        return name;
+    };
     render() {
         const { detailShoe } = this.props;
         return (
@@ -17,7 +23,7 @@ export default class DetailShoe extends Component {
                     </div>
                     <div className="">
                         <span className="fw-bold">Mô tả: </span>
-                        <span>{detailShoe.description}</span>
+                        <span>{this.createText(detailShoe.description)}</span>
                     </div>
                     <div className="">
                         <span className="fw-bold">Số lượng: </span>
